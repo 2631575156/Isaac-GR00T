@@ -62,19 +62,6 @@ Done.
 Activate the environment with:
   conda activate ${ENV_NAME}
 
-Run a single-GPU demo fine-tune with:
-  cd ${PROJECT_DIR}
-  CUDA_VISIBLE_DEVICES=0 python gr00t/experiment/launch_finetune.py \\
-    --base-model-path nvidia/GR00T-N1.7-3B \\
-    --dataset-path demo_data/cube_to_bowl_5 \\
-    --embodiment-tag NEW_EMBODIMENT \\
-    --modality-config-path examples/SO100/so100_config.py \\
-    --num-gpus 1 \\
-    --output-dir /tmp/so100 \\
-    --max-steps 2000 \\
-    --global-batch-size 32 \\
-    --dataloader-num-workers 4
-
 For multiple datasets on Linux, join paths with ':' in --dataset-path, for example:
   --dataset-path "/path/to/dataset_a:/path/to/dataset_b"
 EOF
